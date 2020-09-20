@@ -17,7 +17,7 @@ static_sites:
     deploy_on_push: true
   source_dir: landing
   dockerfile_path: landing/Dockerfile
-  run_command: test -f ./ok && cat ./ok
+  build_command: test -f ./ok && cat ./ok
   routes:
   - path: /landing
 
