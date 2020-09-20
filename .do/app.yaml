@@ -17,7 +17,8 @@ static_sites:
     deploy_on_push: true
   source_dir: landing
   dockerfile_path: landing/Dockerfile
-  build_command: test -f ./ok && cat ./ok
+  output_dir: /workspace
+  # build_command: test -f ./ok && cat ./ok
   routes:
   - path: /landing
 
@@ -48,4 +49,4 @@ workers:
     deploy_on_push: true
   source_dir: worker
   dockerfile_path: worker/Dockerfile
-  run_command: test -f ./ok && cat ./ok && sleep infinity
+  run_command: "[ ! -e ./ok ] && cat ./ok && sleep infinity"
