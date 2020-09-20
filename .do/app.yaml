@@ -8,7 +8,7 @@ static_sites:
     deploy_on_push: true
   source_dir: frontend
   routes:
-  - /
+  - path: /
 
 - name: landing
   github:
@@ -18,7 +18,7 @@ static_sites:
   source_dir: landing
   dockerfile_path: Dockerfile
   routes:
-  - /landing
+  - path: /landing
 
 services:
 - name: api
@@ -28,7 +28,7 @@ services:
     deploy_on_push: true
   source_dir: api
   routes:
-  - /api
+  - path: /api
 
 - name: webhook
   github:
@@ -37,8 +37,9 @@ services:
     deploy_on_push: true
   source_dir: webhook
   routes:
-  - /webhook
+  - path: /webhook
 
+workers:
 - name: worker
   github:
     repo: digitalocean/sample-monorepo
