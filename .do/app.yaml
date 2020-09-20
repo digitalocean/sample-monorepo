@@ -7,6 +7,8 @@ static_sites:
     branch: master
     deploy_on_push: true
   source_dir: frontend
+  index_document: hello.html
+  error_document: error.html
   routes:
   - path: /
 
@@ -18,6 +20,7 @@ static_sites:
   source_dir: landing
   dockerfile_path: landing/Dockerfile
   output_dir: /workspace
+  error_document: error.html
   # build_command: test -f ./ok && cat ./ok
   routes:
   - path: /landing
