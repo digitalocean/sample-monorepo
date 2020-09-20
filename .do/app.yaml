@@ -22,6 +22,7 @@ static_sites:
   output_dir: /workspace
   error_document: error.html
   # build_command: test -f ./ok && cat ./ok
+  # run_command: test -f ./ok && cat ./ok
   routes:
   - path: /landing
 
