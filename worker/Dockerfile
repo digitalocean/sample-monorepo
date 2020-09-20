@@ -1,3 +1,3 @@
 FROM alpine
-ADD ok /workspace/
-WORKDIR /workspace
+ADD . /app/
+WORKDIR /app

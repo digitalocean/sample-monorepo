@@ -1,4 +1,3 @@
 FROM alpine
-ADD index.html /workspace/
-ADD ok /workspace/
-WORKDIR /workspace
+ADD . /app/
+WORKDIR /app

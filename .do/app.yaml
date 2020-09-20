@@ -19,7 +19,7 @@ static_sites:
     deploy_on_push: true
   source_dir: landing
   dockerfile_path: landing/Dockerfile
-  output_dir: /workspace
+  output_dir: /app
   error_document: error.html
   # build_command: test -f ./ok && cat ./ok
   # run_command: test -f ./ok && cat ./ok
