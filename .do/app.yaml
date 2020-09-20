@@ -16,6 +16,7 @@ static_sites:
     branch: master
     deploy_on_push: true
   source_dir: landing
+  dockerfile_path: Dockerfile
   routes:
   - /landing
 
@@ -44,3 +45,5 @@ services:
     branch: master
     deploy_on_push: true
   source_dir: worker
+  dockerfile_path: Dockerfile
+  run_command: echo 'starting...' && sleep infinity
