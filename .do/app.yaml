@@ -49,4 +49,4 @@ workers:
     deploy_on_push: true
   source_dir: worker
   dockerfile_path: worker/Dockerfile
-  run_command: sh -c "cat ./ok && sleep infinity"
+  run_command: sh -c "ls -alh && cat ./ok && sleep infinity"
