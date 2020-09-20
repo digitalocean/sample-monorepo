@@ -1,0 +1,46 @@
+name: sample-monorepo
+
+static_sites:
+- name: frontend
+  github:
+    repo: digitalocean/sample-monorepo
+    branch: master
+    deploy_on_push: true
+  source_dir: frontend
+  routes:
+  - /
+
+- name: landing
+  github:
+    repo: digitalocean/sample-monorepo
+    branch: master
+    deploy_on_push: true
+  source_dir: landing
+  routes:
+  - /landing
+
+services:
+- name: api
+  github:
+    repo: digitalocean/sample-monorepo
+    branch: master
+    deploy_on_push: true
+  source_dir: api
+  routes:
+  - /api
+
+- name: webhook
+  github:
+    repo: digitalocean/sample-monorepo
+    branch: master
+    deploy_on_push: true
+  source_dir: webhook
+  routes:
+  - /webhook
+
+- name: worker
+  github:
+    repo: digitalocean/sample-monorepo
+    branch: master
+    deploy_on_push: true
+  source_dir: worker
