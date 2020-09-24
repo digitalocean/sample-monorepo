@@ -2,6 +2,7 @@ name: sample-monorepo
 
 static_sites:
 - name: frontend
+  environment_slug: html
   github:
     repo: digitalocean/sample-monorepo
     branch: master
@@ -26,6 +27,7 @@ static_sites:
 
 services:
 - name: api
+  environment_slug: go
   github:
     repo: digitalocean/sample-monorepo
     branch: master
@@ -35,6 +37,7 @@ services:
   - path: /api
 
 - name: webhook
+  environment_slug: go
   github:
     repo: digitalocean/sample-monorepo
     branch: master
