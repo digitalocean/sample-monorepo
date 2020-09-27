@@ -5,7 +5,7 @@ static_sites:
   environment_slug: html
   github:
     repo: digitalocean/sample-monorepo
-    branch: master
+    branch: main
     deploy_on_push: true
   source_dir: frontend
   index_document: hello.html
@@ -16,7 +16,7 @@ static_sites:
 - name: landing
   github:
     repo: digitalocean/sample-monorepo
-    branch: master
+    branch: main
     deploy_on_push: true
   source_dir: landing
   dockerfile_path: landing/Dockerfile
@@ -30,7 +30,7 @@ services:
   environment_slug: go
   github:
     repo: digitalocean/sample-monorepo
-    branch: master
+    branch: main
     deploy_on_push: true
   source_dir: api
   routes:
@@ -40,7 +40,7 @@ services:
   environment_slug: go
   github:
     repo: digitalocean/sample-monorepo
-    branch: master
+    branch: main
     deploy_on_push: true
   source_dir: webhook
   routes:
@@ -50,7 +50,7 @@ workers:
 - name: worker
   github:
     repo: digitalocean/sample-monorepo
-    branch: master
+    branch: main
     deploy_on_push: true
   source_dir: worker
   dockerfile_path: worker/Dockerfile
