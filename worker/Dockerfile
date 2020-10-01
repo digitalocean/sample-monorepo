@@ -2,5 +2,7 @@ FROM scratch as init
 ADD . /app/
 
 FROM alpine
-COPY --from=init /app /app
+RUN mkdir /app
+COPY --from=init /app/ok /app/
+COPY ./another-file /app/
 WORKDIR /app
