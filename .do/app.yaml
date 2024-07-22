@@ -4,7 +4,7 @@ static_sites:
 - name: frontend
   environment_slug: html
   github:
-    repo: digitalocean/sample-monorepo
+    repo: fumblehool/sample-monorepo
     branch: main
     deploy_on_push: true
   source_dir: frontend
@@ -15,7 +15,7 @@ static_sites:
 
 - name: landing
   github:
-    repo: digitalocean/sample-monorepo
+    repo: fumblehool/sample-monorepo
     branch: main
     deploy_on_push: true
   source_dir: landing
@@ -29,7 +29,7 @@ services:
 - name: api
   environment_slug: go
   github:
-    repo: digitalocean/sample-monorepo
+    repo: fumblehool/sample-monorepo
     branch: main
     deploy_on_push: true
   source_dir: api
@@ -39,7 +39,7 @@ services:
 - name: webhook
   environment_slug: go
   github:
-    repo: digitalocean/sample-monorepo
+    repo: fumblehool/sample-monorepo
     branch: main
     deploy_on_push: true
   source_dir: webhook
@@ -49,7 +49,7 @@ services:
 workers:
 - name: worker
   github:
-    repo: digitalocean/sample-monorepo
+    repo: fumblehool/sample-monorepo
     branch: main
     deploy_on_push: true
   source_dir: worker
